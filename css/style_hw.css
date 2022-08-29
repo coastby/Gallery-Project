@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  position: relative;
+}
+
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+#toolbar {
+  display: grid;
+  grid-template-columns: 350px 1fr 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #2962FF;
+  color: #EEEEEE;  
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  box-shadow: 2px 0 5px #0D47A1 ;
+  z-index: 2;
+}
+
+#home-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 25px;
+}
+
+nav ul{
+  overflow: hidden;
+  height: 50px;
+  padding-left: 30px;
+}
+
+nav li {
+  float: left;
+  /* display: inline-block; */
+  /* background-color: blue; */
+  width: 100px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav .on {
+  background-color: #0D47A1;
+  border-radius: 5px 5px 0 0;
+}
+
+nav li:hover {
+  background-color: #0D47A1;
+  border-radius: 5px 5px 0 0;
+}
+
+.header .sign {
+  padding-left: 10px;
+}
+
+.header .sign:hover {
+  opacity: 0.2;
+}
+
+main {
+  margin-top: 50px;
+}
+
+main .page,
+main .sidebar {display: none;}
+
+main.gallery ._gallery,
+main.upload ._upload,
+main.myinfo ._myinfo {
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: #EEEEEE;
+  width: 160px;
+  height: calc(100% - 60px);
+  font-weight: 600;
+  color: #212121;
+  z-index: 1;
+  border-right: solid 1px #E0E0E0;
+}
+
+.sidebar .menu-title {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.sidebar ul li {
+  height: 40px;
+  line-height: 40px;
+  /* background-color: yellow; */
+  padding-left: 15px;
+  font-size: 0.8rem;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.on {
+  background-color: #FAFAFA;
+  box-shadow: 0 1px 4px #BDBDBD;
+}
+
+.sidebar .pic-op {
+  margin-top: 20px;
+}
+
+main .container {
+  /* margin-top: 50px; */
+  min-height: calc(100vh - 110px);
+  margin-left: 160px;
+  padding-bottom: 60px;
+}
+
+.container .desc-box {
+  height: 150px;
+  padding: 50px 0 0  50px;
+  border-bottom: solid 1px #E0E0E0;
+  color: #212121;
+}
+
+.container .desc-box h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 200%;
+}
+
+.container .desc-box p {
+  line-height: 130%;
+}
+
+.container .article-box {
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-box article.hidden {
+  display: none;
+}
+
+.article-box .photo-card {
+  width: 280px;
+  height: 280px;
+  /* background-color: lightslategray ; */
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.container .article-box .photo-card:hover {
+  box-shadow: 5px 5px 10px hsl(0, 0%, 60%);}
+
+.article-box .photo-img {
+  width: 280px;
+  height: 210px;
+  object-fit: cover;
+}
+
+.photo-card .photo-contents {
+  display: grid;
+  grid-template-columns: 70px 210px;
+  height: 60px;
+  margin-top: 15px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.photo-card .heart-icon {
+  width: 30px;
+  margin: 10px;
+}
+
+.photo-card .heart-icon:hover {
+  opacity: 0.8;
+}
+
+.heart-icon img {
+  width: 30px;
+}
+
+.photo-card .likes-num {
+  margin : 2px;
+  color: #BDBDBD;
+  text-align: center;
+  font-size: 0.5rem;
+}
+
+.photo-card .user-name {
+  margin-top: 5px;
+  line-height: 180%;
+  font-weight: 700;
+} 
+
+.photo-card .photo-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 120%;
+}
+
+#upload {
+  padding: 50px;
+}
+
+#upload h1 {
+  line-height : 400%;
+  font-weight: 700;
+}
+
+#upload .description {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+#upload .cnt_str {
+  color: lightgrey;
+  margin-left: 10px;
+}
+
+#upload .bt_submit,
+#myinfo .bt_edit,
+#myinfo .bt_edit_submit,
+#myinfo .bt_edit_cancel {
+  display: block;
+  margin-top: 30px;
+  width: 60px;
+  height: 35px;
+  background-color: #2962FF;
+  color: #EEEEEE;
+  border: none;
+  border-radius: 5px;
+}
+
+#myinfo {
+  padding: 50px;  
+}
+
+#myinfo table {
+  border-collapse: collapse;
+}
+
+#myinfo table th {
+  color: #BDBDBD;
+}
+
+#myinfo table tr:not(:last-child) {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+#myinfo table th, 
+#myinfo table td {
+  padding: 15px;
+}
+
+#myinfo table td {
+  width: 300px;
+  font-size: 0.8rem;
+}
+
+#myinfo .my_intro {
+  width: 250px;
+}
+
+#myinfo > div.edit_on ._edit_off,
+#myinfo > div.edit_off ._edit_on {
+  display: none;
+}
+
+#myinfo > div.edit_on ._edit_on {
+  display: inline-block;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #212121;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+
+footer ul {
+  display: inline-block;
+  color: #EEEEEE;
+  font-size: 0.7rem;
+  margin-top: 15px;
+}
+
+footer ul li {
+  float: left;
+  width: 150px;
+  line-height: 30px;
+  text-align: center;
+  border-left: #EEEEEE solid 0.5px;
+}
+
+footer ul li:first-child {
+  border: none;
+}
+
+.add-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0D47A1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  box-shadow: 1px 1px 2px 2px #c5c5c6;
+}
+
+.add-box img {
+  width: 40px;
+  height: 40px;
+}
