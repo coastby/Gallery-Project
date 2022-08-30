@@ -45,8 +45,6 @@ nav ul{
 
 nav li {
   float: left;
-  /* display: inline-block; */
-  /* background-color: blue; */
   width: 100px;
   text-align: center;
   font-size: 1rem;
@@ -63,12 +61,8 @@ nav li:hover {
   border-radius: 5px 5px 0 0;
 }
 
-.header .sign {
-  padding-left: 10px;
-}
-
-.header .sign:hover {
-  opacity: 0.2;
+.sign:hover {
+  opacity: 0.5;
 }
 
 main {
